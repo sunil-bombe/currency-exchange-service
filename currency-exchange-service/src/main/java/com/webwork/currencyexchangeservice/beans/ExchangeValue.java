@@ -2,29 +2,30 @@ package com.webwork.currencyexchangeservice.beans;
 
 import java.math.BigDecimal;
 
-import org.antlr.v4.runtime.misc.NotNull;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name="exchange_value")
 public class ExchangeValue {
 	
 	@Id
+	@Column(name="ID")
 	private Long id;
 	
-	@Column(name="currency_from")
+	@Column(name="CURRENCY_FROM")
 	private String from;
 	
-	@Column(name="currency_to")
+	@Column(name="CURRENCY_TO")
 	private String to;
 	
-	@Column(name="conversion_multiple")
+	@Column(name="CONVERSION_MULTIPLE")
 	private BigDecimal conversionMultiple;
 	
-	@Column(name="port",nullable = true)
-	private int port;
+	@Column(name="PORT")
+	private int port =0;
 
 	public ExchangeValue() {
 		super();
