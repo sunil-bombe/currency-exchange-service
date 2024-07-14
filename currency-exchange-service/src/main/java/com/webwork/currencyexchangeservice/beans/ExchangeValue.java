@@ -25,7 +25,7 @@ public class ExchangeValue {
 	private BigDecimal conversionMultiple;
 	
 	@Column(name="PORT")
-	private int port =0;
+	private Integer port =0;
 
 	public ExchangeValue() {
 		super();
@@ -72,11 +72,11 @@ public class ExchangeValue {
 	}
 	
 
-	public int getPort() {
+	public Integer getPort() {
 		return port;
 	}
 
-	public void setPort(int port) {
+	public void setPort(Integer port) {
 		this.port = port;
 	}
 
